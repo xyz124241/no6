@@ -1,0 +1,13 @@
+name: SuperFlow
+version: 1.0.0
+main: de.superflow.SuperFlow
+api-version: '1.21'
+description: Villager unlimited trading, stacking, XP merging, culling
+commands:
+  vjob:
+    description: Beruf / Trades des Villagers vor dir ändern
+    usage: /vjob <reroll|beruf>
+    permission: superflow.vjob
+permissions:
+  superflow.vjob:
+    default: op

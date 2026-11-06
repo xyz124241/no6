@@ -1,0 +1,29 @@
+villager:
+  unlimited-trades: true      # Trades sperren sich nie, kein Preisanstieg
+  freeze-while-trading: true  # Villager bewegt sich nicht weg, solange du handelst
+
+xp:
+  merge: true
+  radius: 6.0                 # Orbs im Umkreis werden zu einem grossen Orb
+
+items:
+  merge: true
+  radius: 2.5
+  max-stack: 5000             # max. Anzahl pro Item-Haufen
+  interval-ticks: 10          # Merge erst wenn Item am Boden liegt -> kein Ruckeln
+
+mobs:
+  stack: true
+  radius: 8.0
+  max-stack: 200
+  disable-ai: true            # gestackte Mobs bewegen sich nicht
+  max-looting: 10             # hoechstes Looting-Level, das zaehlt (bis 10)
+  loot-samples: 25            # max. Loot-Wuerfe pro Stack-Kill (weniger = weniger Lag)
+  kill-mode: all              # all = ganzer Stack stirbt auf einmal (inkl. Looting), one = einer pro Kill
+  types: [ZOMBIE, SKELETON, WITHER_SKELETON, ZOMBIFIED_PIGLIN, CREEPER, SPIDER, BLAZE, SLIME, COW, PIG, SHEEP, CHICKEN]
+  spawn-reasons: [NATURAL, SPAWNER, TRIAL_SPAWNER]
+
+culling:
+  enabled: true               # Zahlen/Stacks nur sichtbar, wenn Sichtlinie besteht
+  range: 48.0
+  interval-ticks: 10
