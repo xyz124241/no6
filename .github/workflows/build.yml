@@ -1,0 +1,30 @@
+name: Build SuperFlow
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+  workflow_dispatch:   # manuell startbar über den "Actions"-Tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code holen
+        uses: actions/checkout@v4
+
+      - name: Java 21 einrichten
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Mit Maven bauen
+        run: mvn -B package
+
+      - name: JAR hochladen
+        uses: actions/upload-artifact@v4
+        with:
+          name: SuperFlow-jar
+          path: target/SuperFlow-*.jar
